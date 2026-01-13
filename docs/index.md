@@ -1,4 +1,4 @@
-# C# Reference Architecture (from main)
+# C# Reference Architecture (from branch 2)
 
 > [!Important]
 > This version of the documentation was not produced through the official C#RA release process and may contain inaccuracies or outdated information. Please use with caution, and refer to the official documentation provided with C#RA releases for verified content. 
