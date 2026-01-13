@@ -1,0 +1,80 @@
+name: Features & Implementation
+href: index.md
+homepage: index.md
+items:
+- name: Code Structure
+  href: code-structure.md
+  expanded: true
+  items:
+  - name: TestBlocks
+    href: code-structure_test-blocks.md
+  - name: TestMethods
+    href: code-structure_test-methods.md
+  - name: Services
+    href: code-structure_services.md
+  - name: Types
+    href: code-structure_types.md
+  - name: Enums
+    href: code-structure_enums.md
+  - name: Extension Methods
+    href: code-structure_extension-methods.md
+- name: Features & Types
+  expanded: true
+  items:
+  - name: Alert Service
+    href: alert-service.md
+  - name: Behavior Service
+    href: behavior-service.md
+  - name: MethodHandle Type
+    href: methodhandle-type.md
+  - name: Offline Features
+    href: offline-features.md
+  - name: PatternInfo Type
+    href: patterninfo-type.md
+  - name: Pins Type
+    href: pins-type.md
+  - name: Search & Trim
+    href: search-trim.md
+  - name: Setup Service
+    href: setup-service.md
+  - name: Single- & MultiCondition
+    href: single-multi-condition.md
+  - name: Transaction Service
+    href: transaction-service.md
+- name: Concepts
+  expanded: true
+  items:
+  - name: Characterization Support
+    href: characterization-support.md
+  - name: Copilot Friendliness
+    href: copilot-friendliness.md
+  - name: Custom Validation
+    href: custom-validation.md
+  - name: Documentation
+    href: documentation.md
+  - name: Extensibility
+    href: extensibility.md
+  - name: External Libraries
+    href: external-libraries.md
+  - name: Instrument Specific
+    href: instrument-specific.md
+  - name: Legacy Templates
+    href: legacy-templates.md  
+  - name: Modularity
+    href: modularity.md
+  - name: Multi-Target IG-XL Support
+    href: multi-target-igxl.md
+  - name: Persistent Data Storage
+    href: persistent-data-storage.md  
+  - name: Platform Independence
+    href: platform-independence.md
+  - name: SSN
+    href: ssn.md
+  - name: Stepping
+    href: stepping.md
+  - name: Test Abstraction
+    href: test-abstraction.md
+  - name: Unit- & Integration Testing
+    href: unit-integration-testing.md
+  - name: Versioning & Compatibility
+    href: versioning-compatibility.md

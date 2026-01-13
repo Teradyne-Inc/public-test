@@ -1,0 +1,13 @@
+items:
+- name: DCVI Instrument Nodes
+  href: setup-service_dcvi.md
+- name: DCVS Instrument Nodes
+  href: setup-service_dcvs.md
+- name: Digital Instrument Nodes
+  href: setup-service_digital.md
+- name: PPMU Instrument Nodes
+  href: setup-service_ppmu.md
+- name: Utility Instrument Nodes
+  href: setup-service_utility.md
+- name: Setting Types
+  href: setup-service_setting_types.md

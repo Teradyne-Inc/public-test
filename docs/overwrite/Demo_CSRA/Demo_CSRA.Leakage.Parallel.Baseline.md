@@ -1,0 +1,54 @@
+---
+uid: Demo_CSRA.Leakage.Parallel.Baseline(Teradyne.Igxl.Interfaces.Public.PinList,System.Double,System.Double,System.Double,System.String)
+custom_details: *content
+---
+
+##### Test Technique
+
+This test method can be used to measure currents flowing into device inputs. One common example is the digital input leakage test to detect issues in isolation structures, possibly damaged by a manufacturing flaw or elevated test voltage levels. Even though such a device may still work according to the specification, statistical outliers can indicate early failures in the devices' target application.
+
+A typical circuitry for a leakage test showing the device and four instruments (three different types) connected to individual device pins. The instruments are ground referenced and in Force-Voltage mode to allow measuring the currents flowing into the device.
+
+![Schematic](media/leakage-parallel-baseline-schematic.png)
+
+The test typically applies a voltage near the VDD level to digital input pins, after the device has been brought into a static state that should not allow any current to flow. Ideally, the measured currents are very close to 0A. High sensitivity to noise, and the need to settle dynamic (charging) effects often result in significant test times, mitigated only by the fact that the measurement can usually be made on all pins in parallel.
+
+The parallel testing method stands out for its high level of efficiency, as it allows the simultaneous evaluation of multiple pins, thereby significantly reducing testing time and optimizing the use of available resources. However, a major limitation of this approach lies in its inability to detect leakage currents between input pins, since all pins are tested concurrently. In such cases, it is recommended to resort to the serial testing method, which enables a more precise and individual analysis of each pin.
+Details can be found in: [Leakage.Serial.Baseline](xref:Demo_CSRA.Leakage.Serial.Baseline(Teradyne.Igxl.Interfaces.Public.PinList,System.Double,System.Double,System.Double,System.Double,System.String))
+
+Alternatively, the group testing method offers a balance between precision and efficiency by performing sequential testing of pins or groups of pins, according to the structure defined in the `pinList`.
+Details can be found in: [Leakage.Groups.Baseline](xref:Demo_CSRA.Leakage.Groups.Baseline(Teradyne.Igxl.Interfaces.Public.PinList,System.Double,System.Double,System.Double,System.Double,System.String))
+
+Special attention is required to avoid these common issues:
+
+- An accidental disconnect in the signal path (e.g., due to an open DIB relay) may be difficult to detect, as measurements into an open line yield statistically inconspicuous results.
+- The measurement of very small currents may be limited by the instrument's performance, so that the results rather reflect the instrument's behavior instead of the component's characteristic.
+
+##### Implementation
+
+The **PreBody** section applies levels and timing from the test instance context. Optionally, applies the specified `setup`. For all pins specified in the `pinList` it disconnects any pin electronics and connects the dc path.
+
+The **Body** section applies a force `voltage`, turns on the gate to all pins, and performs a current measurement on all pins in parallel after the specified `waitTime`.
+
+The **PostBody** section establishes the pin electronics connection for digital pins after gating off and disconnecting the DC path. Finally, a parametric datalog is logged.
+
+##### Platform Specifics
+
+Supports stepping capability for PreBody/Body/PostBody.
+
+##### Pre Conditions
+
+- none
+
+##### Post Conditions
+
+- digital pins in `pinList` have pin electronics connected
+- any dc paths from pins in `pinList` are disconnected
+
+##### Limitations
+
+- none
+
+##### Code Reference
+
+[!code-csharp[](../../../src/Demo/Demo_CSRA/Leakage/Parallel.cs?name=Baseline)]

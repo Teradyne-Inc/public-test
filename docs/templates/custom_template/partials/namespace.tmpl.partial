@@ -1,0 +1,31 @@
+{{!Licensed to the .NET Foundation under one or more agreements. The .NET Foundation licenses this file to you under the MIT license.}}
+
+<h1 id="{{id}}" data-uid="{{uid}}" class="text-break">{{>partials/title}}</h1>
+<div class="markdown level0 summary">{{{summary}}}</div>
+<div class="markdown level0 conceptual">{{{conceptual}}}</div>
+<div class="markdown level0 remarks">{{{remarks}}}</div>
+
+{{#custom_overview}}
+<h3 class="section" id="{{id}}_custom_overview">{{_custom_overview}}</h3>
+<div class="markdown level1 custom_overview">{{{custom_overview}}}</div>
+{{/custom_overview}}
+
+{{#children}}
+  <h3 id="{{id}}">{{>partials/namespaceSubtitle}}</h3>
+  {{#children}}
+  <dl class="jumplist">
+    <dt><xref uid="{{uid}}" altProperty="fullName" displayProperty="name"/></dt>
+    <dd>{{{summary}}}</dd>
+  </dl>
+  {{/children}}
+{{/children}}
+
+{{#custom_details}}
+<h3 class="section" id="{{id}}_custom_details">{{_custom_details}}</h3>
+<div class="markdown level1 custom_details">{{{custom_details}}}</div>
+{{/custom_details}}
+
+{{#custom_examples}}
+<h3 class="section" id="{{id}}_custom_examples">{{_custom_examples}}</h3>
+<div class="markdown level1 custom_examples">{{{custom_examples}}}</div>
+{{/custom_examples}}

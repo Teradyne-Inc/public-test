@@ -1,0 +1,22 @@
+name: Getting Started
+href: index.md
+homepage: index.md
+items:
+- name: Download & Extract
+  href: download.md
+- name: Installation & Adding Reference
+  href: installation.md
+- name: Use a TestMethod
+  href: use-test-method.md
+- name: Usings
+  href: usings.md
+- name: Debugging C#RA
+  href: debug.md
+- name: Suggest a Documentation Fix
+  href: doc-contribution.md
+- name: Request a Feature
+  href: request-feature.md
+- name: Write TestMethod
+  href: write-test-method.md
+- name: Write TestBlock
+  href: write-test-block.md

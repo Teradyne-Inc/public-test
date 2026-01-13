@@ -1,0 +1,18 @@
+name: Index
+href: ./index.md
+homepage: ./index.md
+items:
+- name: Getting Started
+  href: getting-started/
+  homepage: getting-started/index.md
+- name: Features & Implementation
+  href: features/
+  homepage: features/index.md
+- name: Training
+  href: training/
+  homepage: training/index.md
+- name: Releases
+  href: releases_/
+  homepage: releases_/v0.13.md
+- name: API Documentation
+  href: api/
